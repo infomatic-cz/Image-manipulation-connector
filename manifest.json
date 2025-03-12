@@ -1,0 +1,42 @@
+{
+	"actions": [
+		{
+			"name": "Resize Image",
+			"type": "python",
+			"parameters": [
+				{
+					"name": "input_png",
+					"type": "string"
+				},
+				{
+					"name": "max_width",
+					"type": "number"
+				},
+				{
+					"name": "max_height",
+					"type": "number"
+				}
+			],
+			"response": [
+				{
+					"name": "status",
+					"type": "string"
+				},
+				{
+					"name": "message",
+					"type": "string"
+				},
+				{
+					"name": "output_png",
+					"type": "string"
+				}
+			],
+			"commandline": [
+				"import image",
+				"rpa_return = image.resize_image(%1, %2, %3)"
+			]
+		}
+	],
+	"name": "Image manipulation (python)",
+	"python-support": 3
+}
